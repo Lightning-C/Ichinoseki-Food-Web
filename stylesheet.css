@@ -12,9 +12,6 @@ div:hover {
     width: 50%;
     height: 50%;
     position: absolute;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     top: 0;
     left: 0;
     background-color: white;
@@ -24,9 +21,6 @@ div:hover {
     width: 50%;
     height: 50%;
     position: absolute; 
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     top: 0; 
     right: 0;
     background-color: #696969;
@@ -36,9 +30,6 @@ div:hover {
     width: 50%;
     height: 50%;
     position: absolute; 
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     bottom: 0;
     left: 0;
     background-color: #696969;
@@ -48,9 +39,6 @@ div:hover {
     width: 50%;
     height: 50%;
     position: absolute;
-     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     bottom: 0;
     right: 0;
     background-color: white;
