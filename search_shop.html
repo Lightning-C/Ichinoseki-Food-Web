@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>店舗絞り込み検索</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<form name="chbox">
+<p>検索したい地域を選択</p>
+<input type="checkbox" value="a"><br>
+<input type="checkbox" value="b"><br>
+<input type="checkbox" value="c"><br>
+<input type="checkbox" value="d"><br>
+<input type="checkbox" value="e"><br>
+<input type="checkbox" value="f"><br>
+<input type="button" value="検索" onclick="boxCheck()">
+</form>
+<script>
+  function boxCheck(){
 
+  //チェックされた項目を記録する変数
+  var str="";
+  
+  //for文でチェックボックスを１つずつ確認
+  for( i=0; i<6; i++ )
+  {
+    //チェックされているか確認する
+    if( document.chbox.elements[i].checked )
+    {
+      //変数strが空でない時、区切りのコンマを入れる
+      if( str != "" ) str=str+",";
+      
+      //チェックボックスのvalue値を変数strに入れる
+      str=str+document.chbox.elements[i].value;
+    }
+  }
+  
+  //strが空の時、警告を出す
+  if( str=="" ){
+     alert( "どれか選択してください。" );
+  }else{
+    alert( str + "が選択されました。" );
+  }
+}
+</script>
+</body>
+</html>
