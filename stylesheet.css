@@ -14,7 +14,7 @@ div:hover {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: white;
 }
 
 .b {
@@ -23,7 +23,7 @@ div:hover {
     position: absolute; 
     top: 0; 
     right: 0;
-    background-color: white;
+    background-color: #696969;
 }
 
 .c {
@@ -32,7 +32,7 @@ div:hover {
     position: absolute; 
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: white;
 }
 
 .d {
@@ -41,5 +41,5 @@ div:hover {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: white;
+    background-color: #696969;
 }
