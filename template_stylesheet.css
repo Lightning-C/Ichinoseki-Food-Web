@@ -1,5 +1,95 @@
 @charset "utf-8";
 
+*, *:before, *:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.cp_cont {
+	height: 10vh;
+}
+.cp_offcm04 {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	display: inline-block;
+}
+/* menu */
+.cp_offcm04 .cp_menu {
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	width: 250px;
+	height: 100%;
+	cursor: pointer;
+	-webkit-transition: 0.53s transform;
+	        transition: 0.53s transform;
+	-webkit-transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+	        transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+	background-color: #e91e63;
+	opacity: 0.8;
+}
+.cp_offcm04 .cp_menu ul {
+	margin: 0;
+	padding: 0;
+}
+.cp_offcm04 .cp_menu li {
+	list-style: none;
+}
+.cp_offcm04 .cp_menu li a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+
+.cp_offcm04 #cp_toggle04 {
+	position: fixed;
+	display: none;
+	opacity: 0;
+}
+.cp_offcm04 #cp_toggle04:checked ~ .cp_menu {
+	-webkit-transform: translateX(100vw);
+	        transform: translateX(100vw);
+}
+/* menu toggle */
+.cp_offcm04 #cp_toggle04 ~ label {
+	display: block;
+	padding: 0.5em;
+	cursor: pointer;
+	-webkit-transition: 0.5s transform;
+	        transition: 0.5s transform;
+	-webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+	        transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+	text-align: center;
+	color: #333333;
+}
+.cp_offcm04 #cp_toggle04:checked ~ label {
+	-webkit-transform: translateX(250px);
+	        transform: translateX(250px);
+}
+.cp_offcm04 #cp_toggle04 ~ label::before {
+	font-family: 'FontAwesome';
+	content: '\f0c9';
+	font-size: 2em
+}
+.cp_offcm04 #cp_toggle04:checked ~ label::before {
+	content: '\f00d';
+}
+/* contents */
+.cp_contents {
+	color: #333333;
+	text-align: center;
+}
+
 .cp_breadcrumb *, .cp_breadcrumb *::after, .cp_breadcrumb *::before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -8,7 +98,7 @@
 .cp_breadcrumb {
     overflow: hidden;
     width: 100%;
-    margin: 0;
+    margin-left: 5em;
     padding: 0;
     list-style: none;
 }
@@ -16,14 +106,14 @@
 .cp_breadcrumb li {
     display: inline-block;
     padding: 0;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0.3em 0;
 }
 
 .cp_breadcrumb a {
     position: relative;
     display: inline-block;
     margin: 0;
-    padding: 0.2em 1em 0.2em 2em;
+    padding: 0.2em 0.5em 0.2em 2em;
     text-decoration: none;
     color: #ffffff;
     background-color: #e91e63;
@@ -52,7 +142,7 @@
 
 .cp_breadcrumb a::before {
     z-index: 1;
-    right: -1.8em;
+    right: -1.2em;
     border-left-color: #ffffff;
 }
 
@@ -104,6 +194,7 @@ header {
     position: relative;
     height: 30vh;
     width: 100vw;
+    z-index: 1;
     background: url(./img/deza-to.JPG) center / cover;
     background-color:rgba(255, 255, 255, 0.37);
     background-blend-mode:lighten;
