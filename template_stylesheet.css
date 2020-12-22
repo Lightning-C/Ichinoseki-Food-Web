@@ -305,7 +305,7 @@ main2 {
     animation-delay: 16s;
   }
 
-  .label {
+  label {
     display: block;
     margin-bottom: 7px;
     font-size: 86%;
