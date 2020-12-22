@@ -315,6 +315,9 @@ main2 {
         max-width: 100%;
         height: 70px;
     }
+input[type="text"] {
+        width: 100%;
+    }
   iframe {
       float: right;
       margin: 2em;
