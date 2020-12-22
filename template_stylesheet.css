@@ -305,6 +305,11 @@ main2 {
     animation-delay: 16s;
   }
 
+  .label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 86%;
+}
   iframe {
       float: right;
       margin: 2em;
