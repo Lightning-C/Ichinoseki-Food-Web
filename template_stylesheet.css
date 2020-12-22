@@ -310,6 +310,11 @@ main2 {
     margin-bottom: 7px;
     font-size: 86%;
 }
+ textarea {
+        width: 100%;
+        max-width: 100%;
+        height: 70px;
+    }
   iframe {
       float: right;
       margin: 2em;
