@@ -1,104 +1,146 @@
 @charset "utf-8";
 
-*, *:before, *:after {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-ol, ul {
-	list-style: none;
-}
-a {
-	text-decoration: none;
-	color: inherit;
-}
-.cp_cont {
-	height: 10vh;
-}
-.cp_offcm04 {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	display: inline-block;
-}
-/* menu */
-.cp_offcm04 .cp_menu {
-	position: fixed;
-	top: 0;
-	left: -100vw;
-	width: 250px;
-	height: 100%;
-	cursor: pointer;
-	-webkit-transition: 0.53s transform;
-	        transition: 0.53s transform;
-	-webkit-transition-timing-function: cubic-bezier(.38,.52,.23,.99);
-	        transition-timing-function: cubic-bezier(.38,.52,.23,.99);
-	background-color: #e91e63;
-	opacity: 0.8;
-}
-.cp_offcm04 .cp_menu ul {
-	margin: 0;
-	padding: 0;
-}
-.cp_offcm04 .cp_menu li {
-	list-style: none;
-}
-.cp_offcm04 .cp_menu li a {
-	display: block;
-	padding: 20px;
-	text-decoration: none;
-	color: #ffffff;
-	border-bottom: 1px solid #ffffff;
+.Manubar {
+    position: fixed;
+    z-index: 1000;
+    margin-top: -1%;
+    width: 100vw;
+    background-color: #ffffff;
 }
 
-.cp_offcm04 #cp_toggle04 {
-	position: fixed;
-	display: none;
-	opacity: 0;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #fff;
+  }
+
+  /*------------------------------
+
+    ここから下がハンバーガーメニュー
+    に関するCSS
+
+  ------------------------------*/
+
+  /* チェックボックスは非表示に */
+  .drawer-hidden {
+    display: none;
+  }
+
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer-open {
+    display: flex;
+    height: 67px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;/* 重なり順を一番上に */
+    cursor: pointer;
+  }
+
+  /* ハンバーガーメニューのアイコン */
+  .drawer-open span,
+  .drawer-open span:before,
+  .drawer-open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+  }
+
+  /* 三本線のうち一番上の棒の位置調整 */
+  .drawer-open span:before {
+    bottom: 8px;
+  }
+
+  /* 三本線のうち一番下の棒の位置調整 */
+  .drawer-open span:after {
+    top: 8px;
+  }
+
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer-check:checked ~ .drawer-open span {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer-check:checked ~ .drawer-open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  #drawer-check:checked ~ .drawer-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* メニューのデザイン*/
+  .drawer-content {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;/* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+  }
+
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer-check:checked ~ .drawer-content {
+    left: 0%;/* メニューを画面に入れる */
+  }
+
+  #drawer-check:checked ~ .drawer-open {
+      left: 30%;
+      animation: fadein .5s ease 0 0 normal ;
+  }
+
+ul.drawer-list {
+	width: 200px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #eeeeee;
 }
-.cp_offcm04 #cp_toggle04:checked ~ .cp_menu {
-	-webkit-transform: translateX(100vw);
-	        transform: translateX(100vw);
-}
-/* menu toggle */
-.cp_offcm04 #cp_toggle04 ~ label {
+li a {
 	display: block;
-	padding: 0.5em;
-	cursor: pointer;
-	-webkit-transition: 0.5s transform;
-	        transition: 0.5s transform;
-	-webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
-	        transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+	padding: 8px 16px;
+	text-decoration: none;
+	color: #000000;
+}
+li {
 	text-align: center;
-	color: #333333;
 }
-.cp_offcm04 #cp_toggle04:checked ~ label {
-	-webkit-transform: translateX(250px);
-	        transform: translateX(250px);
+li:last-child {
+	border-bottom: none;
 }
-.cp_offcm04 #cp_toggle04 ~ label::before {
-	font-family: 'FontAwesome';
-	content: '\f0c9';
-	font-size: 2em
+li a.active {
+	color: #ffffff;
+	background-color: #da3c41;
 }
-.cp_offcm04 #cp_toggle04:checked ~ label::before {
-	content: '\f00d';
-}
-/* contents */
-.cp_contents {
-	color: #333333;
-	text-align: center;
+li a:hover:not(.active) {
+	color: #ffffff;
+	background-color: #1b2538;
 }
 
 .cp_breadcrumb *, .cp_breadcrumb *::after, .cp_breadcrumb *::before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    top: 0%;
 }
 
 .cp_breadcrumb {
     overflow: hidden;
-    width: 100%;
+    width: 92%;
     margin-left: 5em;
+    margin-top: 2%;
     padding: 0;
     list-style: none;
 }
@@ -193,8 +235,9 @@ a {
 header {
     position: relative;
     height: 30vh;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
+    margin-top: 5vh;
     background: url(./img/deza-to.JPG) center / cover;
     background-color:rgba(255, 255, 255, 0.37);
     background-blend-mode:lighten;
@@ -206,7 +249,8 @@ header h1 {
     line-height: 20vh;
     text-align: center;
     vertical-align: bottom;
-    top: 109px;
+    top: 146px;
+    left: 20px;
 }
 main1 {
     display: flex;
@@ -226,3 +270,57 @@ tr {
     border-style: solid;
     border-width: 1px 0;
 }
+
+main2 {
+    display: flex;
+}
+
+.slide {
+    margin: 2em;
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+  }
+   
+  @keyframes slideshow{
+    0%{
+      opacity: 0;
+    }
+    10%{
+      opacity: 1;
+    }
+    28%{
+      opacity: 1
+    }
+    38%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+   
+  .slide img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation :slideshow 24s linear infinite;
+  }
+   
+  .slide img:nth-child(2){
+    animation-delay: 8s;
+  }
+   
+  .slide img:last-child{
+    animation-delay: 16s;
+  }
+
+  iframe {
+      float: right;
+      margin: 2em;
+  }
