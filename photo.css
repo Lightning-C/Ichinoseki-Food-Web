@@ -1,6 +1,4 @@
-@charset "utf-8";
-
-.Manubar {
+.header {
     position: fixed;
     z-index: 1000;
     margin-top: -1%;
@@ -8,21 +6,13 @@
     background-color: #ffffff;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background: #fff;
-  }
-
-  .drawer-hidden {
+.drawer-hidden {
     display: none;
   }
 
   .drawer-open {
     display: flex;
-    height: 69px;
+    height: 29px;
     width: 43px;
     justify-content: center;
     align-items: center;
@@ -113,7 +103,7 @@ li a.active {
 
 .breadcrumb {
   margin: 0 0 0 10px;
-  padding-top: 0.3%;
+  padding-top: 0%;
   -webkit-overflow-scrolling: touch; 
 }
 
@@ -179,97 +169,26 @@ li a.active {
       transform: scaleX(0);
   }
 }
-
-header {
-    position: relative;
-    height: 35vh;
-    width: 100%;
-    z-index: 1;
-    background: url(./img/deza-to.JPG) center / cover;
-    background-color:rgba(255, 255, 255, 0.37);
-    background-blend-mode:lighten;
-}
-
-header h1 {
-    position: relative;
-    font-size: 32px;
-    line-height: 20vh;
-    text-align:left;
-    top: 60%;
-    width: 100%;
-    height: 50%;
-}
-main1 {
-    display: flex;
-}
-
-table {
-    border-collapse: collapse;
-    font-size: 15px;
-    background: floralwhite;
+    body{
+    background:#EAFBF9;
+   }
+   img{
+    width:85vw;
+    max-width:100%;
+    height: auto;
+   }
+   .wrap{
+    width:95%;
+    margin:0 auto;
+    text-align:center;
+   }
+   .mainImage img{
+    text-align:center;
+   }
+   .thumbnails{
     width:50%;
-    height:200;
-    margin-left: auto;
-}
-
-tr {
-    border-color: navajowhite;
-    border-style: solid;
-    border-width: 1px 0;
-}
-
-main2 {
-    display: flex;
-}
-
-.slide {
-    margin: 2em;
-    position: relative;
-    width: 50vw;
-    height: 50vh;
-    overflow: hidden;
-  }
-   
-  @keyframes slideshow{
-    0%{
-      opacity: 0;
-    }
-    10%{
-      opacity: 1;
-    }
-    28%{
-      opacity: 1
-    }
-    38%{
-      opacity: 0;
-    }
-    100%{
-      opacity: 0;
-    }
-  }
-   
-  .slide img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    opacity: 0;
-    animation :slideshow 24s linear infinite;
-  }
-   
-  .slide img:nth-child(2){
-    animation-delay: 8s;
-  }
-   
-  .slide img:last-child{
-    animation-delay: 16s;
-  }
-
-  iframe {
-    height: auto;
-    float: right;
-    margin: 2em;
-  }
+    margin:0 auto;
+   }
+   .thumbnails img{
+    width:30%;
+   }
