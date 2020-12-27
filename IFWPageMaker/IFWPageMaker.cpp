@@ -7,6 +7,7 @@
 #include <Shlwapi.h>
 #include <direct.h>
 #include <sys/stat.h>
+#include <locale.h>
 
 using namespace std;
 
@@ -193,30 +194,122 @@ void output_file_maker(int csv_lines, string folder)
 		}
 	}
 }
-/*//出力用HTMLファイルの存在確認
-int output_file_checker()
+//出力用HTMLファイルの存在確認
+void output_file_checker(int csv_lines, string folder)
 {
+	string s;
+	string f;
+	string dir = "\\";
+	string fil = ".html";
+	string file_name;
+	for (int i = 0; i < csv_lines; i++)
+	{
+		const char* num;
+		s = to_string(i);
+		file_name = folder + "\\PAGES" + dir + s + dir + s + fil;
+		const char* name = file_name.c_str();
+		bool checker;
+		ifstream path(name);
+		checker = path.is_open();
 
+		if (checker != 0)
+		{
+			cout << "ファイル" << file_name << "は正常に作成されました" << endl;
+		}
+		else
+		{
+			cout << "ファイル" << file_name << "の作成に失敗しました 終了します" << endl;
+		}
+	}
 }
 
 //出力用HTMLファイルを開く
-int output_file_open()
+void output_file_open(int csv_lines,string folder)
 {
+	string s;
+	string f;
+	string dir = "\\";
+	string fil = ".html";
+	string file_name;
+	for (int i = 0; i < csv_lines; i++)
+	{
+		const char* num;
+		s = to_string(i);
+		file_name = folder + "\\PAGES" + dir + s + dir + s + fil;
+		const char* name = file_name.c_str();
+		cout <<name<< "を開いています..." << endl;
+		ifstream path(name);
+		cout << name << "を開きました!" << endl;
+	}
+	
+}
 
+string ReplaceString(string String1, string String2 , string String3)
+{
+	std::string::size_type  Pos(String1.find(String2));
+
+	while (Pos != std::string::npos)
+	{
+		String1.replace(Pos, String2.length(), String3);
+		Pos = String1.find(String2, Pos + String3.length());
+	}
+
+	return String1;
 }
 
 //出力用HTMLファイルに出力する
-int output_file_output()
+void output_file_output(int csv_lines,int html_lines,string folder,string html_path)
 {
-
+	string s;
+	string f;
+	string dir = "\\";
+	string fil = ".html";
+	string file_name;
+	vector<string> vstr;
+	for (int i = 0; i < csv_lines; i++)
+	{
+		const char* num;
+		s = to_string(i);
+		file_name = folder + "\\PAGES" + dir + s + dir + s + fil;
+		const char* name = file_name.c_str();
+		cout << name << "への書き込みの開始..." << endl;
+		ifstream path(html_path);
+		ofstream opath(name,ios::app);
+		string tmp;
+		while (getline(path, tmp))vstr.push_back(tmp);
+		for (int ohl = 0; ohl < html_lines; ohl++)
+		{
+			string now_line = vstr[ohl];
+			now_line = ReplaceString(now_line, ("hogehogename"), "a");
+			now_line = ReplaceString(now_line, ("hogehogecomment0"), "a");
+			now_line = ReplaceString(now_line, ("hogehogecomment1"), "a");
+			now_line = ReplaceString(now_line, ("hogehogecomment2"), "a");
+			now_line = ReplaceString(now_line, ("hogehogegenre"), "a");
+			now_line = ReplaceString(now_line, ("hogehogetel"), "a");
+			now_line = ReplaceString(now_line, ("hogehogeaddress"), "a");
+			now_line = ReplaceString(now_line, ("hogehogetime"), "a");
+			now_line = ReplaceString(now_line, ("hogehogeholiday"), "a");
+			opath <<now_line<<endl;
+		}
+		path.close();
+		cout << name << "への書き込みが終了しました!" << endl;
+	}
 }
-*/
+
+//メインプロセス
 int main()
 {
-	string pth;
-	cin >> pth;
-	directory_maker(8,pth);
-	directory_checker(8, pth);
-	output_file_maker(8, pth);
+	string path;
+	cin >> path;
+	string apath;
+	cin >> apath;
+	int a;
+	directory_maker(5, path);
+	directory_checker(5, path);
+	output_file_maker(5, path);
+	output_file_checker(5, path);
+	output_file_open(5, path);
+	a=ihtml_file_lines(apath);
+	output_file_output(5, a, path, apath);
 	return 0;
 }
