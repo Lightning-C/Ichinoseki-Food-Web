@@ -268,8 +268,27 @@ main2 {
     animation-delay: 16s;
   }
 
+  label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 86%;
+}
+ textarea {
+        width: 100%;
+        max-width: 100%;
+        height: 70px;
+    }
+input[type="text"] {
+        width: 100%;
+    }
   iframe {
+<<<<<<< HEAD
     height: auto;
     float: right;
     margin: 2em;
   }
+=======
+      float: right;
+      margin: 2em;
+  }
+>>>>>>> 5b3bbdce1ef3c7dc78f03bc4e4a69b691a0bf34f
