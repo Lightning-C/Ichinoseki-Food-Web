@@ -1,9 +1,9 @@
-.header {
+.manubar {
     position: fixed;
     z-index: 1000;
     margin-top: -1%;
     width: 100vw;
-    background-color: #ffffff;
+    background-color: #f7d5b9;
 }
 
 .drawer-hidden {
@@ -12,7 +12,7 @@
 
   .drawer-open {
     display: flex;
-    height: 29px;
+    height: 59px;
     width: 43px;
     justify-content: center;
     align-items: center;
@@ -102,9 +102,9 @@ li a.active {
 }
 
 .breadcrumb {
-  margin: 0 0 0 10px;
-  padding-top: 0%;
-  -webkit-overflow-scrolling: touch; 
+    margin: 0 0 -7px 10px;
+    padding-top: 0%;
+    -webkit-overflow-scrolling: touch; 
 }
 
 .breadcrumb ul {
@@ -170,10 +170,11 @@ li a.active {
   }
 }
     body{
-    background:#EAFBF9;
+    background:#f7d5b9;
    }
    img{
-    width:85vw;
+    margin-top: 3vh;
+    width:65vw;
     max-width:100%;
     height: auto;
    }

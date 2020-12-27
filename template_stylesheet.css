@@ -282,13 +282,8 @@ input[type="text"] {
         width: 100%;
     }
   iframe {
-<<<<<<< HEAD
     height: auto;
     float: right;
     margin: 2em;
   }
-=======
-      float: right;
-      margin: 2em;
-  }
->>>>>>> 5b3bbdce1ef3c7dc78f03bc4e4a69b691a0bf34f
+   
