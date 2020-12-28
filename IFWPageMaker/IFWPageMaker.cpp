@@ -301,7 +301,7 @@ int main()
 {
 	string path;
 	cin >> path;
-	string apath;
+	string  apath;
 	cin >> apath;
 	int a;
 	directory_maker(5, path);
