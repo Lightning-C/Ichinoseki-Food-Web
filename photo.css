@@ -169,27 +169,46 @@ li a.active {
       transform: scaleX(0);
   }
 }
-    body{
-    background:#f7d5b9;
-   }
-   img{
-    margin-top: 3vh;
-    width:65vw;
-    max-width:100%;
-    height: auto;
-   }
-   .wrap{
-    width:95%;
-    margin:0 auto;
-    text-align:center;
-   }
-   .mainImage img{
-    text-align:center;
-   }
-   .thumbnails{
-    width:50%;
-    margin:0 auto;
-   }
-   .thumbnails img{
-    width:30%;
-   }
+
+body{
+  background:#f7d5b9;
+}
+
+img{
+  margin-top: 2vh;
+  width:auto;
+  max-width:100%;
+  height: 45vh;
+}
+
+.slider-show{
+  text-align: center;
+  margin:0 ;
+}
+
+.slider-show img{
+  padding: 11px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+
+}
+
+.slider{
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+.slider img{
+  border: 3px black;
+  height: auto;
+  width: 100%;
+  
+}
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(0, 0, 0);
+}
+
+
+   

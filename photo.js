@@ -1,7 +1,17 @@
 $(function(){
-    $('.thumbnails img').click(function(){
-     var $thisImg = $(this).attr('src');
-     var $thisAlt = $(this).attr('alt');
-     $('.mainImage img').attr({src:$thisImg,alt:$thisAlt});
+  $('.slider-show').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider'
     });
-   });
+    $('.slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: '.slider-show',
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true
+    });
+});
