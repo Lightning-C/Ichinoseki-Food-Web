@@ -8,28 +8,33 @@
     <title>template</title>
 </head>
 <body>
-    <div class="cp_cont">
-        <div class="cp_offcm04">
-            <input type="checkbox" id="cp_toggle04">
-            <label for="cp_toggle04"><span></span></label>
-            <div class="cp_menu">
-            <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">category</a></li>
-            <li><a href="#">sub category</a></li>
-            <li><a href="#">sub category</a></li>
-            <li><a href="#">contents</a></li>
+    <div class="Manubar">
+        <div class="manu"></div>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="drawer">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer-check" class="drawer-open"><span></span></label>
+          <!-- メニュー -->
+          <nav class="drawer-content">
+            <ul　class="drawer-list">
+                <li　class="drawer-item"><a class="active" href="">Home</a></li>
+                <li　class="drawer-item"><a href="">News</a></li>
+                <li　class="drawer-item"><a href="">Contact</a></li>
+                <li　class="drawer-item"><a href="">About</a></li>
             </ul>
-            </div>
+          </nav>
         </div>
-    </div>
     <ul class="cp_breadcrumb">
-        <li><a href="twitter.com">home</a></li>
-        <li><a href="twitter.com">category</a></li>
-        <li><a href="twitter.com">sub category</a></li>
-        <li><a href="twitter.com">sub category</a></li>
-        <li><a href="twiiter.com">contents</a></li>
+        <li><a href="">home</a></li>
+        <li><a href="">category</a></li>
+        <li><a href="">sub category</a></li>
+        <li><a href="">sub category</a></li>
+        <li><a href="">contents</a></li>
     </ul>
+    </div><br>
+
     <header>
         <h1>こなもん倶楽部　阪神</h1>
     </header>
