@@ -16,31 +16,21 @@
     background: #fff;
   }
 
-  /*------------------------------
-
-    ここから下がハンバーガーメニュー
-    に関するCSS
-
-  ------------------------------*/
-
-  /* チェックボックスは非表示に */
   .drawer-hidden {
     display: none;
   }
 
-  /* ハンバーガーアイコンの設置スペース */
   .drawer-open {
     display: flex;
-    height: 67px;
-    width: 60px;
+    height: 69px;
+    width: 43px;
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 100;/* 重なり順を一番上に */
+    z-index: 100;
     cursor: pointer;
   }
 
-  /* ハンバーガーメニューのアイコン */
   .drawer-open span,
   .drawer-open span:before,
   .drawer-open span:after {
@@ -54,22 +44,18 @@
     position: absolute;
   }
 
-  /* 三本線のうち一番上の棒の位置調整 */
   .drawer-open span:before {
     bottom: 8px;
   }
 
-  /* 三本線のうち一番下の棒の位置調整 */
   .drawer-open span:after {
     top: 8px;
   }
 
-  /* アイコンがクリックされたら真ん中の線を透明にする */
   #drawer-check:checked ~ .drawer-open span {
     background: rgba(255, 255, 255, 0);
   }
 
-  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
   #drawer-check:checked ~ .drawer-open span::before {
     bottom: 0;
     transform: rotate(45deg);
@@ -80,21 +66,20 @@
     transform: rotate(-45deg);
   }
 
-  /* メニューのデザイン*/
   .drawer-content {
     width: 30%;
     height: 100%;
     position: fixed;
     top: 0;
-    left: -100%;/* メニューを画面の外に飛ばす */
+    left: -100%;
     z-index: 99;
     background: #fff;
     transition: .5s;
   }
 
-  /* アイコンがクリックされたらメニューを表示 */
+
   #drawer-check:checked ~ .drawer-content {
-    left: 0%;/* メニューを画面に入れる */
+    left: 0%;
   }
 
   #drawer-check:checked ~ .drawer-open {
@@ -111,7 +96,7 @@ ul.drawer-list {
 }
 li a {
 	display: block;
-	padding: 8px 16px;
+	padding: 0px 7px;
 	text-decoration: none;
 	color: #000000;
 }
@@ -125,132 +110,94 @@ li a.active {
 	color: #ffffff;
 	background-color: #da3c41;
 }
-li a:hover:not(.active) {
-	color: #ffffff;
-	background-color: #1b2538;
+
+.breadcrumb {
+  margin: 0 0 0 10px;
+  padding-top: 0.3%;
+  -webkit-overflow-scrolling: touch;
 }
 
-.cp_breadcrumb *, .cp_breadcrumb *::after, .cp_breadcrumb *::before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    top: 0%;
+.breadcrumb ul {
+  display: table;
 }
 
-.cp_breadcrumb {
-    overflow: hidden;
-    width: 92%;
-    margin-left: 5em;
-    margin-top: 2%;
-    padding: 0;
-    list-style: none;
+.breadcrumb ul li {
+  font-size: 1rem;
+  display: table-cell;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding-right: 10px;
+  position: relative;
 }
 
-.cp_breadcrumb li {
-    display: inline-block;
-    padding: 0;
-    margin: 0 0 0.3em 0;
+.breadcrumb ul li:last-child {
+  padding-right: 0;
 }
 
-.cp_breadcrumb a {
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    padding: 0.2em 0.5em 0.2em 2em;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #e91e63;
+.breadcrumb ul li:last-child:after {
+  display: none;
 }
 
-.cp_breadcrumb li:first-child a {
-    padding-left: 1em;
-    border-radius: 5px 0 0 5px;
+.breadcrumb ul li:after {
+  position: absolute;
+  display: block;
+  content: '';
+  content: ">";
+  top: 0px;
+  right: -2px;
 }
 
-.cp_breadcrumb a::after,.cp_breadcrumb a::before {
-    position: absolute;
-    top: 50%;
-    right: -0.96em;
-    margin-top: -0.96em;
-    content: "";
-    border-top: 0.96em solid transparent;
-    border-bottom: 0.96em solid transparent;
-    border-left: 0.96em solid ;
+.breadcrumb ul li a:before {
+  position: absolute;
+  display: block;
+  content: '';
+  right: 5px;
+  width: 90%;
+  height: 1px;
+  background-color: #111;
+  bottom: 0px;
 }
 
-.cp_breadcrumb a::after {
-    z-index: 2;
-    border-left-color: #e91e63;
+.breadcrumb ol li a,
+.breadcrumb ol li span {
+  position: relative;
+  display: block;
+  top: -4px;
 }
 
-.cp_breadcrumb a::before {
-    z-index: 1;
-    right: -1.2em;
-    border-left-color: #ffffff;
+.breadcrumb ul li span {
+  border-radius: 4px;
+  padding: 6px 8px;
 }
 
-.cp_breadcrumb li:nth-child(2) a {
-    background: #ec407a;
-}
-
-.cp_breadcrumb li:nth-child(2) a::after {
-    border-left-color: #ec407a;
-}
-
-.cp_breadcrumb li:nth-child(3) a {
-    background: #f06292;
-}
-
-.cp_breadcrumb li:nth-child(3) a::after {
-    border-left-color: #f06292;
-}
-
-.cp_breadcrumb li:nth-child(4) a {
-    background: #f48fb1;
-}
-
-.cp_breadcrumb li:nth-child(4) a::after {
-    border-left-color: #f48fb1;
-}
-
-.cp_breadcrumb li:nth-child(5) a {
-    background: #f8bbd0;
-}
-
-.cp_breadcrumb li:nth-child(5) a::after {
-    border-left-color: #f8bbd0;
-}
-
-.cp_breadcrumb li:last-child a {
-    cursor: default;
-    pointer-events: none;
-    color: black;
-    background: #f7d7e2;
-    border-radius: 0 5px 5px 0;
-}
-
-.cp_breadcrumb li:last-child a::before,.cp_breadcrumb li:last-child a::after {
-    content: normal;
+@media print,screen and (min-width: 1024px) {
+  .breadcrumb ul li a:before {
+      transform: scaleX(1);
+      transition: transform 0.3s ease;
+  }
+  .breadcrumb ul li a:hover:before {
+      transform: scaleX(0);
+  }
 }
 
 header {
     position: relative;
-    height: 30vh;
+    height: 35vh;
     width: 100%;
     z-index: 1;
-    margin-top: 5vh;
     background: url(./img/deza-to.JPG) center / cover;
     background-color:rgba(255, 255, 255, 0.37);
     background-blend-mode:lighten;
 }
 
 header h1 {
-    position: absolute;
+    position: relative;
     font-size: 32px;
     line-height: 20vh;
-    text-align: center;
-    vertical-align: bottom;
-    top: 109px;
-    left: 20px;
+    text-align:left;
+    top: 60%;
+    width: 100%;
+    height: 50%;
 }
 main1 {
     display: flex;
@@ -270,3 +217,76 @@ tr {
     border-style: solid;
     border-width: 1px 0;
 }
+
+main2 {
+    display: flex;
+}
+
+.slide {
+    margin: 2em;
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+}
+
+@keyframes slideshow{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  28%{
+    opacity: 1
+  }
+  38%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  animation :slideshow 24s linear infinite;
+}
+
+.slide img:nth-child(2){
+  animation-delay: 8s;
+}
+
+.slide img:last-child{
+  animation-delay: 16s;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 86%;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 70px;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+iframe {
+    height: auto;
+    float: right;
+    margin: 2em;
+}
+
+>>>>>>> 3dc4b7623426fdd56558d57d807099ad6fc6cef9

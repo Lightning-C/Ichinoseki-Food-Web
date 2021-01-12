@@ -10,13 +10,9 @@
 <body>
     <div class="Manubar">
         <div class="manu"></div>
-        <!-- ハンバーガーメニュー部分 -->
         <div class="drawer">
-          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
           <input type="checkbox" id="drawer-check" class="drawer-hidden" >
-          <!-- ハンバーガーアイコン -->
           <label for="drawer-check" class="drawer-open"><span></span></label>
-          <!-- メニュー -->
           <nav class="drawer-content">
             <ul　class="drawer-list">
                 <li　class="drawer-item"><a class="active" href="">Home</a></li>
@@ -26,17 +22,17 @@
             </ul>
           </nav>
         </div>
-    <ul class="cp_breadcrumb">
-        <li><a href="">home</a></li>
-        <li><a href="">category</a></li>
-        <li><a href="">sub category</a></li>
-        <li><a href="">sub category</a></li>
-        <li><a href="">contents</a></li>
-    </ul>
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="#">検索</a></li>
+                <li><span>店名</span></li>
+            </ul>
+        </nav>
     </div><br>
 
     <header>
-        <h1>こなもん倶楽部　阪神</h1>
+        <h1>こなもんCLUB 阪神</h1>
     </header>
     <h2>店舗情報</h2>
     <main1>
@@ -72,13 +68,35 @@
         </table>
     </main1><br>
     <main2>
-        <img src="./img/nijisora.JPG" width="50%" height="50%">
+        <a href="./photo.html">
+            <div class="slide">
+                <img src="./img/okonomiyaki.JPG" alt="">
+                <img src="./img/nijisora.JPG" alt="">
+                <img src="./img/ramen.JPG" alt="">
+              </div>
+        </a>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.971443096614!2d141.1075043!3d38.9246302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f88d09d6f0b0357%3A0x7ecc4e362c08f769!2z5LiA6Zai5bel5qWt6auY562J5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1607392765253!5m2!1sja!2sjp"
-            width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-            tabindex="0"></iframe>
+            width="50%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0">
+        </iframe>
     </main2>
 
+    <form method="post">
+	<div>
+		<label for="view_name">ユーザー名</label>
+		<input id="view_name" type="text" name="view_name" value="">
+	</div>
+	<div>
+		<label for="message">レビュー</label>
+		<textarea id="message" name="message"></textarea>
+	</div>
+	<input type="submit" name="btn_submit" value="投稿">
+    </form>
+    <hr>
+	<section>
+	<!-- ここに投稿されたメッセージを表示 -->
+	</section>
 </body>
 
 </html>
