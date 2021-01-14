@@ -283,10 +283,18 @@ textarea {
 input[type="text"] {
   width: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
+.putdown {
+  margin-top: -2%;
+  margin-left: 83%;
+}
+
 iframe {
     height: auto;
     float: right;
-    margin: 2em;
+    margin-top: 2em;
 }
-
->>>>>>> 3dc4b7623426fdd56558d57d807099ad6fc6cef9
