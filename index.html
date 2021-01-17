@@ -9,18 +9,19 @@
 </head>
 <body>
     <div class="Manubar">
-        <div class="manu"></div>
         <div class="drawer">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
           <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+          <!-- ハンバーガーアイコン -->
           <label for="drawer-check" class="drawer-open"><span></span></label>
-          <nav class="drawer-content">
-            <ul　class="drawer-list">
-                <li　class="drawer-item"><a class="active" href="">Home</a></li>
-                <li　class="drawer-item"><a href="">News</a></li>
-                <li　class="drawer-item"><a href="">Contact</a></li>
-                <li　class="drawer-item"><a href="">About</a></li>
+          <!-- メニュー -->
+          <div class="drawer-content">
+            <ul>
+                <li><a href="">地域</a></li>
+                <li><a href="">ジャンル</a></li>
+                <li><a href="">食べ物</a></li>
             </ul>
-          </nav>
+          </div>
         </div>
         <nav class="breadcrumb">
             <ul>
@@ -38,9 +39,9 @@
     <main1>
         <ul>
             <li>とってもおいしいよ！！</li>
-            <li></li>
+            <li>テンプレート</li>
         </ul>
-        <table>
+        <table class="information">
             <tr>
                 <th>店名</th>
                 <td>hoge</td>
@@ -68,14 +69,18 @@
         </table>
     </main1>
     <main2>
-        <a href="./photo.html">
+        <div class="photo">
             <div class="slide">
-                <img src="./img/okonomiyaki.JPG" alt="">
-                <img src="./img/nijisora.JPG" alt="">
-                <img src="./img/ramen.JPG" alt="">
+                <img src="./img/okonomiyaki.JPG">
+                <img src="./img/yannyomu.JPG">
+                <img src="./img/soup.JPG">
             </div>
-            <div class="putdown">↑↑PUSH!!</div>
-        </a>
+            <div class="readmore">
+                <a class="button" href="./photo.html">more picture</a>
+            </div>
+        </div>
+        
+            
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.971443096614!2d141.1075043!3d38.9246302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f88d09d6f0b0357%3A0x7ecc4e362c08f769!2z5LiA6Zai5bel5qWt6auY562J5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1607392765253!5m2!1sja!2sjp"
             width="50%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"

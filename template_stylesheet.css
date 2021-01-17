@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body {
+  margin: 10px;
+}
+
 .Manubar {
     position: fixed;
     z-index: 1000;
@@ -16,103 +20,125 @@
     background: #fff;
   }
 
-  .drawer-hidden {
-    display: none;
-  }
-
-  .drawer-open {
-    display: flex;
-    height: 69px;
-    width: 43px;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 100;
-    cursor: pointer;
-  }
-
-  .drawer-open span,
-  .drawer-open span:before,
-  .drawer-open span:after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    background: #333;
-    transition: 0.5s;
-    position: absolute;
-  }
-
-  .drawer-open span:before {
-    bottom: 8px;
-  }
-
-  .drawer-open span:after {
-    top: 8px;
-  }
-
-  #drawer-check:checked ~ .drawer-open span {
-    background: rgba(255, 255, 255, 0);
-  }
-
-  #drawer-check:checked ~ .drawer-open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-  }
-
-  #drawer-check:checked ~ .drawer-open span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-
-  .drawer-content {
-    width: 30%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    z-index: 99;
-    background: #fff;
-    transition: .5s;
-  }
-
-
-  #drawer-check:checked ~ .drawer-content {
-    left: 0%;
-  }
-
-  #drawer-check:checked ~ .drawer-open {
-      left: 30%;
-      animation: fadein .5s ease 0 0 normal ;
-  }
-
-ul.drawer-list {
-	width: 200px;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	background-color: #eeeeee;
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
 }
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 69px;
+  width: 43px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 99;
+  background:navajowhite;
+  transition: .5s;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 0%;
+}
+
+#drawer-check:checked ~ .drawer-open {
+  left: 30%;
+  animation: fadein .5s ease 0 0 normal ;
+}
+
+.drawer-content ul {
+  padding: 70px 10px 0;
+}
+
+.drawer-content ul li {
+  border-bottom: solid 1px #000000;
+  list-style: none;
+}
+
+.drawer-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  box-sizing: border-box;
+  color:#000000;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+.drawer-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #000000;
+  border-right: solid 2px #000000;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
 li a {
 	display: block;
 	padding: 0px 7px;
 	text-decoration: none;
 	color: #000000;
 }
-li {
-	text-align: center;
-}
-li:last-child {
-	border-bottom: none;
-}
-li a.active {
-	color: #ffffff;
-	background-color: #da3c41;
-}
 
 .breadcrumb {
-  margin: 0 0 0 10px;
   padding-top: 0.3%;
   -webkit-overflow-scrolling: touch;
 }
@@ -185,19 +211,23 @@ header {
     height: 35vh;
     width: 100%;
     z-index: 1;
-    background: url(./img/deza-to.JPG) center / cover;
-    background-color:rgba(255, 255, 255, 0.37);
+    background: url(./img/hireniku.JPG) center / cover;
+    background-color:rgba(255, 255, 255, 0.58);
     background-blend-mode:lighten;
 }
 
 header h1 {
     position: relative;
     font-size: 32px;
-    line-height: 20vh;
+    line-height: 22vh;
     text-align:left;
     top: 60%;
+    left: 10px;
     width: 100%;
     height: 50%;
+}
+h2 {
+  margin-bottom: 0;
 }
 main1 {
     display: flex;
@@ -223,9 +253,9 @@ main2 {
 }
 
 .slide {
-    margin: 2em;
+    margin: 2em 2em 0 0;
     position: relative;
-    width: 50vw;
+    width: 49vw;
     height: 50vh;
     overflow: hidden;
 }
@@ -284,13 +314,27 @@ input[type="text"] {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
+.readmore {
+  margin-top: 7px;
 }
 
-.putdown {
-  margin-top: -2%;
-  margin-left: 83%;
+.readmore a.button {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px;
+  line-height: 14px;
+  font-size: 14px;
+  width: 160px;
+  margin: 0 auto;
+  border: 1px solid #aaa;
+}
+
+.readmore a.button:hover {
+  color: #fff;
+  background: #333;
 }
 
 iframe {
