@@ -319,6 +319,7 @@ input[type="text"] {
 }
 
 .readmore a.button {
+  border-radius: 10px;
   text-decoration: none;
   color: #333;
   display: block;
@@ -326,7 +327,7 @@ input[type="text"] {
   background-color: #eee;
   padding: 10px;
   line-height: 14px;
-  font-size: 14px;
+  font-size: 17px;
   width: 160px;
   margin: 0 auto;
   border: 1px solid #aaa;
