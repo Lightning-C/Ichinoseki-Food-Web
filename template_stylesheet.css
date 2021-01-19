@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 body {
+  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   margin: 10px;
+  background-color: #fadcac;
 }
 
 .Manubar {
@@ -9,7 +11,7 @@ body {
     z-index: 1000;
     margin-top: -1%;
     width: 100vw;
-    background-color: #ffffff;
+    background-color: #fadcac;
 }
 
 .header {
@@ -85,7 +87,7 @@ body {
   top: 0;
   left: -100%;
   z-index: 99;
-  background:navajowhite;
+  background: #fad27d;
   transition: .5s;
 }
 
@@ -236,14 +238,14 @@ main1 {
 table {
     border-collapse: collapse;
     font-size: 15px;
-    background: floralwhite;
+    background: #fae7c8;
     width:50%;
     height:200;
     margin-left: auto;
 }
 
 tr {
-    border-color: navajowhite;
+    border-color: #fad27d;
     border-style: solid;
     border-width: 1px 0;
 }
@@ -323,10 +325,10 @@ input[type="text"] {
   color: #333;
   display: block;
   text-align: center;
-  background-color: #eee;
+  background-color: #fae7c8;
   padding: 10px;
   line-height: 14px;
-  font-size: 14px;
+  font-size: 18px;
   width: 160px;
   margin: 0 auto;
   border: 1px solid #aaa;
