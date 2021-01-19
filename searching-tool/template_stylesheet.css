@@ -208,9 +208,12 @@ table {
     border-collapse: collapse;
     font-size: 30px;
     background: floralwhite;
-    width:100%;
+    width: 80%;
     height:200;
     margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
 }
 
 tr {
@@ -294,4 +297,9 @@ input[type="text"]{
 }
 .search{
   text-align: center;
+}
+IMG.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto ;
 }
