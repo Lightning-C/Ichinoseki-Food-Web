@@ -1,11 +1,11 @@
 
 
 .manubar {
-    position: fixed;
-    z-index: 1000;
-    margin-top: -1%;
-    width: 100vw;
-    background-color:  #fadcac;
+  top: 0%;
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  background-color:  #fadcac;
 }
 
 /* チェックボックスは非表示に */
@@ -16,7 +16,7 @@
 /* ハンバーガーアイコンの設置スペース */
 .drawer-open {
   display: flex;
-  height: 69px;
+  height: 58px;
   width: 43px;
   justify-content: center;
   align-items: center;
@@ -208,14 +208,12 @@ img{
 
 .slider-show{
   text-align: center;
-  margin:0 ;
+  margin-top: 20px;
 }
 
 .slider-show img{
-  padding: 11px;
-  background-color: #FFFFFF;
-  box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
-
+  border: 10px #ffffff solid;
+  box-sizing: border-box;
 }
 
 .slider{
@@ -224,7 +222,7 @@ img{
   width: 80%;
 }
 .slider img{
-  border: 3px black;
+  border: .1px black;
   height: auto;
   width: 100%;
   

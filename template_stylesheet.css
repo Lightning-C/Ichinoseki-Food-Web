@@ -7,11 +7,11 @@ body {
 }
 
 .Manubar {
-    position: fixed;
-    z-index: 1000;
-    margin-top: -1%;
-    width: 100vw;
-    background-color: #fadcac;
+  top: 0%;
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  background-color: #fadcac;
 }
 
 .header {
@@ -30,7 +30,7 @@ body {
 /* ハンバーガーアイコンの設置スペース */
 .drawer-open {
   display: flex;
-  height: 69px;
+  height: 58px;
   width: 43px;
   justify-content: center;
   align-items: center;
@@ -141,7 +141,6 @@ li a {
 }
 
 .breadcrumb {
-  padding-top: 0.3%;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -213,7 +212,7 @@ header {
     height: 35vh;
     width: 100%;
     z-index: 1;
-    background: url(./img/hireniku.JPG) center / cover;
+    background: url(./img/noimage.png) center / cover;
     background-color:rgba(255, 255, 255, 0.58);
     background-blend-mode:lighten;
 }
