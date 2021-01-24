@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 .Manubar {
+  top: 0%;
+  left: 0%;
   position: fixed;
   z-index: 1000;
-  margin-top: -1%;
   width: 100vw;
   background-color: #fadcac;
 }
@@ -24,7 +25,7 @@ display: none;
 /* ハンバーガーアイコンの設置スペース */
 .drawer-open {
 display: flex;
-height: 69px;
+height: 64px;
 width: 43px;
 justify-content: center;
 align-items: center;
@@ -96,29 +97,44 @@ left: 0%;
       animation: fadein .5s ease 0 0 normal ;
   }
 
-ul.drawer-list {
-	width: 200px;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	background-color: #eeeeee;
-}
-li a {
-	display: block;
-	padding: 0px 7px;
-	text-decoration: none;
-	color: #000000;
-}
-li {
-	text-align: center;
-}
-li:last-child {
-	border-bottom: none;
-}
-li a.active {
-	color: #ffffff;
-	background-color: #da3c41;
-}
+  .drawer-content ul {
+    padding: 70px 10px 0;
+  }
+  
+  .drawer-content ul li {
+    border-bottom: solid 1px #000000;
+    list-style: none;
+  }
+  
+  .drawer-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    box-sizing: border-box;
+    color:#000000;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+  
+  .drawer-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #000000;
+    border-right: solid 2px #000000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  }
+  
+  li a {
+    display: block;
+    padding: 0px 7px;
+    text-decoration: none;
+    color: #000000;
+  }
 
 .breadcrumb {
   margin: 0 0 0 10px;
@@ -200,7 +216,7 @@ header {
 }
 body 
 {
-  background-color :#fadcac;
+  background-color :floralwhite;
 }
 
 header h1 {
