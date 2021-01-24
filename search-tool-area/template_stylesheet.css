@@ -5,7 +5,7 @@
   z-index: 1000;
   margin-top: -1%;
   width: 100vw;
-  background-color: #ffffff;
+  background-color: #fadcac;
 }
 
 .header {
@@ -81,7 +81,7 @@ position: fixed;
 top: 0;
 left: -100%;
 z-index: 99;
-background:navajowhite;
+background:#fad27d;
 transition: .5s;
 }
 
@@ -200,7 +200,7 @@ header {
 }
 body 
 {
-  background-color:rgba(250,220,172, 0.37);
+  background-color :#fadcac;
 }
 
 header h1 {
