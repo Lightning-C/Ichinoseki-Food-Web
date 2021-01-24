@@ -1,11 +1,19 @@
 @charset "utf-8";
 
 .Manubar {
+  top: 0%;
+  left: 0%;
   position: fixed;
   z-index: 1000;
-  margin-top: -1%;
   width: 100vw;
-  background-color: #ffffff;
+  background-color: #fadcac;
+  border-bottom: 1px #000000 solid;
+}
+
+.logo {
+  float: right;
+  margin-right: 3vw;
+  margin-top: 1vh;
 }
 
 .header {
@@ -91,38 +99,53 @@
 }
 
 
-  #drawer-check:checked ~ .drawer-open {
-      left: 30%;
-      animation: fadein .5s ease 0 0 normal ;
-  }
-
-ul.drawer-list {
-	width: 200px;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	background-color: #eeeeee;
+#drawer-check:checked ~ .drawer-open {
+    left: 30%;
+    animation: fadein .5s ease 0 0 normal ;
 }
+.drawer-content ul {
+  padding: 70px 10px 0;
+}
+
+.drawer-content ul li {
+  border-bottom: solid 1px #000000;
+  list-style: none;
+}
+
+.drawer-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  box-sizing: border-box;
+  color:#000000;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+.drawer-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #000000;
+  border-right: solid 2px #000000;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
 li a {
 	display: block;
 	padding: 0px 7px;
 	text-decoration: none;
 	color: #000000;
 }
-li {
-	text-align: center;
-}
-li:last-child {
-	border-bottom: none;
-}
-li a.active {
-	color: #ffffff;
-	background-color: #da3c41;
-}
 
 .breadcrumb {
   margin: 0 0 0 10px;
   padding-top: 0.3%;
+  display: inline-block;
   -webkit-overflow-scrolling: touch; 
 }
 
@@ -194,13 +217,14 @@ header {
     height: 35vh;
     width: 100%;
     z-index: 1;
-    background: url(./img/deza-to.JPG) center / cover;
     background-color:rgba(255, 255, 255, 0.37);
     background-blend-mode:lighten;
 }
 body 
 {
-  background-color:rgba(250,220,172, 0.37);
+  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  margin: 10px;
+  background-color: floralwhite;
 }
 
 header h1 {
@@ -229,7 +253,7 @@ table {
 }
 
 tr {
-    border-color: navajowhite;
+    border-color: floralwhite;
     border-style: solid;
     border-width: 1px 0;
     text-align: center;
