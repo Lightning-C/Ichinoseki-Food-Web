@@ -327,6 +327,7 @@ input[type="text"] {
 
 .readmore {
   margin-top: 7px;
+  margin-right: 2em;
 }
 
 .readmore a.button {
@@ -335,7 +336,7 @@ input[type="text"] {
   color: #333;
   display: block;
   text-align: center;
-  background-color: #fae7c8;
+  background-color: #fadcac;
   padding: 10px;
   line-height: 14px;
   font-size: 18px;
