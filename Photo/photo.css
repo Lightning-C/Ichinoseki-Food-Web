@@ -205,7 +205,7 @@ li a {
 
 body{
   font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-  background: #fadcac;
+  background: floralwhite;
 }
 
 .slider-show{
@@ -218,7 +218,7 @@ body{
   width:auto;
   max-width:100%;
   height: 60vh;
-  border: 10px #ffffff solid;
+  border: 10px #fadcac solid;
   box-sizing: border-box;
 }
 
@@ -233,7 +233,7 @@ body{
   width: 100%;
   
 }
-/*slick setting*/
+
 .slick-prev:before,
 .slick-next:before {
   color: rgb(0, 0, 0);
