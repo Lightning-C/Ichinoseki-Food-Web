@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PAGES.css">
+    <title>焼肉ぱんらい</title>
+</head>
+<body>
+    <div class="Manubar">
+        <div class="drawer">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer-check" class="drawer-open"><span></span></label>
+          <!-- メニュー -->
+          <div class="drawer-content">
+            <ul>
+                <li><a href="../../SEARCHS/WORDSEARCH.html">ワード検索</a></li>
+                <li><a href="../../SEARCHS/AREASEARCH.html">地域</a></li>
+                <li><a href="../../SEARCHS/GENRESEARCH.html">ジャンル</a></li>
+                <li><a href="../../SEARCHS/WORDSEARCH.html">食べ物</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="../../SEARCHS/WORDSEARCH.html">検索</a></li>
+                <li><span>焼肉ぱんらい</span></li>
+            </ul>
+        </nav>
+        <div class="logo"><img src="../../img/aikon1.png"></div>
+    </div>
+
+    <header>
+        <h1>焼肉ぱんらい</h1>
+    </header>
+    <h2>店舗情報</h2>
+    <main1>
+        <ul>
+            <li>バイパス沿いに位置する焼肉屋さん</li>
+            <li>いろんな種類のビビンバがあり老若男女問わず楽しめるお店！</li>
+        </ul>
+        <table class="information">
+            <tr>
+                <th>店名</th>
+                <td>焼肉ぱんらい</td>
+            </tr>
+            <tr>
+                <th>ジャンル</th>
+                <td>焼肉</td>
+            </tr>
+            <tr>
+                <th>電話番号</th>
+                <td>0191-52-2941</td>
+            </tr>
+            <tr>
+                <th>住所</th>
+                <td>千厩町千厩字古ヶ口96-1</td>
+            </tr>
+            <tr>
+                <th>営業時間</th>
+                <td>11:0~23:0</td>
+            </tr>
+            <tr>
+                <th>定休日</th>
+                <td>火曜日</td>
+            </tr>
+        </table>
+    </main1>
+    <main2>
+        <div class="photo">
+            <div class="slide">
+                <img src="../../img/千厩/焼肉ぱんらい/(1).jpg" onError="this.onerror=null;this.src='../../img/noimage.png';" />
+                <img src="../../img/千厩/焼肉ぱんらい/(2).jpg" onError="this.onerror=null;this.src='../../img/noimage.png';" />
+                <img src="../../img/千厩/焼肉ぱんらい/(3).jpg" onError="this.onerror=null;this.src='../../img/noimage.png';" />
+            </div>
+            <div class="readmore">
+                <a class="button" href="image.html">もっと見る</a>
+            </div>
+        </div>
+
+        <iframe
+            src="https://maps.google.co.jp/maps?output=embed&q=千厩町千厩字古ヶ口96-1&z=16"
+            width="50%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0">
+        </iframe>
+    </main2>
+
+    <form method="post">
+	<div>
+		<label for="view_name">ユーザー名</label>
+		<input id="view_name" type="text" name="view_name" value="">
+	</div>
+	<div>
+		<label for="message">レビュー</label>
+		<textarea id="message" name="message"></textarea>
+	</div>
+	<input type="submit" name="btn_submit" value="投稿">
+    </form>
+    <hr>
+	<section>
+	<!-- ここに投稿されたメッセージを表示 -->
+	</section>
+</body>
+
+</html>
