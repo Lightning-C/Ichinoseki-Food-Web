@@ -1,0 +1,421 @@
+@charset "utf-8";
+
+.Manubar {
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  background-color: #fadcac;
+  border-bottom: 1px #000000 solid;
+}
+
+.logo {
+  float: right;
+  margin-right: 3vw;
+  margin-top: 1vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #fff;
+}
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 69px;
+  width: 43px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 99;
+  background: #fad27d;
+  transition: .5s;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 0%;
+}
+
+
+#drawer-check:checked ~ .drawer-open {
+    left: 30%;
+    animation: fadein .5s ease 0 0 normal ;
+}
+.drawer-content ul {
+  padding: 70px 10px 0;
+}
+
+.drawer-content ul li {
+  border-bottom: solid 1px #000000;
+  list-style: none;
+}
+
+.drawer-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  box-sizing: border-box;
+  color:#000000;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+.drawer-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #000000;
+  border-right: solid 2px #000000;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+li a {
+	display: block;
+	padding: 0px 7px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.breadcrumb {
+  margin: 0 0 0 10px;
+  padding-top: 0.3%;
+  display: inline-block;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.breadcrumb ul {
+  display: table;
+}
+
+.breadcrumb ul li {
+  font-size: 1rem;
+  display: table-cell; 
+  white-space: nowrap; 
+  vertical-align: middle;
+  padding-right: 10px;
+  position: relative;
+}
+
+.breadcrumb ul li:last-child {
+  padding-right: 0;
+}
+
+.breadcrumb ul li:last-child:after {
+  display: none;
+}
+
+.breadcrumb ul li:after {
+  position: absolute;
+  display: block;
+  content: '';
+  content: ">";
+  top: 0px;
+  right: -2px;
+}
+
+.breadcrumb ul li a:before {
+  position: absolute;
+  display: block;
+  content: '';
+  right: 5px;
+  width: 90%;
+  height: 1px;
+  background-color: #111;
+  bottom: 0px;
+}
+
+.breadcrumb ol li a,
+.breadcrumb ol li span {
+  position: relative;
+  display: block;
+  top: -4px;
+}
+
+.breadcrumb ul li span {
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+
+@media print,screen and (min-width: 1024px) { 
+  .breadcrumb ul li a:before {
+      transform: scaleX(1);
+      transition: transform 0.3s ease;
+  }
+  .breadcrumb ul li a:hover:before {
+      transform: scaleX(0);
+  }
+}
+
+header {
+    position: relative;
+    height: 35vh;
+    width: 100%;
+    z-index: 1;
+    background-color:rgba(255, 255, 255, 0.37);
+    background-blend-mode:lighten;
+}
+body 
+{
+  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  margin: 10px;
+  background-color: floralwhite;
+}
+
+header h1 {
+    position: relative;
+    font-size: 32px;
+    line-height: 20vh;
+    text-align:left;
+    top: 60%;
+    width: 100%;
+    height: 50%;
+}
+main1 {
+    display: flex;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 30px;
+    background: floralwhite;
+    width: 85%;
+    height:200;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+tr {
+    border-color: floralwhite;
+    border-style: solid;
+    border-width: 1px 0;
+    text-align: center;
+    font-family: "YuGothicMedium","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+    font-size: large;
+}
+
+
+main2 {
+    display: flex;
+}
+
+.slide {
+    margin: 0em;
+    position: relative;
+    width: 90vw;
+    height: 28vh;
+    overflow: hidden;
+}
+   
+@keyframes slideshow{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  28%{
+    opacity: 1
+  }
+  38%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+   
+.slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  animation :slideshow 24s linear infinite;
+}
+   
+.slide img:nth-child(2){
+  animation-delay: 8s;
+}
+   
+.slide img:last-child{
+  animation-delay: 16s;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 86%;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 70px;
+}
+iframe {
+    height: auto;
+    float: right;
+    margin: 2em;
+}
+input[type="text"]{
+  height: 50px;
+  width: 60%;
+  font-size:x-large;
+}
+.search{
+  padding-top: 7%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+IMG.displayed {
+  height: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto ;
+}
+#page_top{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f139';
+  font-size: 50px;
+  color: #000000;
+}
+.temp
+{
+  margin-left: auto;
+  margin-top: auto;
+  text-align:center;
+}
+.cp_ipradio {
+	width: 90%;
+	margin: 2em auto;
+	text-align: left;
+}
+.cp_ipradio input[type='radio'] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.cp_ipradio label {
+	position: relative;
+	display: inline-block;
+	margin-right: 30px;
+	padding-right: 10px;
+	padding-left: 35px;
+  cursor: pointer;
+  text-align: center;
+}
+.cp_ipradio label::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	content: ' ';
+	border: 2px solid #000000;
+	border-radius: 4px;
+}
+.cp_ipradio input[type='radio'] + label::before {
+	border-radius: 18px;
+}
+.cp_ipradio input[type='radio']:checked + label {
+	padding-left: 10px;
+	color: #ffffff;
+}
+.cp_ipradio input[type='radio']:checked + label::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+}
+/* Transition */
+.cp_ipradio label, .cp_ipradio label::before {
+	-webkit-transition: 0.25s all ease;
+	        transition: 0.25s all ease;
+}

@@ -1,0 +1,145 @@
+body {
+    font-family: "Yu Gothic Medium";
+    margin: 0;
+    padding: 0;
+    background-color: floralwhite;
+    font-size: 25px;
+}
+
+header {
+    height: 10vh;
+    background-color: #fadcac;
+}
+
+.flex {
+    display: flex;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.header-menu {
+    width: 100%;
+    height: 10vh;
+}
+
+.header-menu div {
+    flex: auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partition {
+    border-right: 2px solid #000;
+}
+
+.page-link {
+    color: #000;
+    position: relative;
+    text-decoration: none;
+}
+
+.page-link::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background: #000;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+.page-link:hover::after {
+    transform: scale(1,1)
+}
+
+.food-images {
+    width: 100%;
+    height: 90vh;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan {
+    color: #fff;
+    font-size: 5rem;
+    backdrop-filter: blur(12px);
+}
+
+.search {
+    margin: 0 10%;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 50px;
+    font-size: x-large;
+}
+
+.genre-list {
+    height: 30vh;
+    flex: auto;
+    flex-wrap: wrap;
+}
+
+.genre-list div {
+    width: 50%;
+}
+
+.genre-link {
+    position: relative;
+}
+
+.genre-link a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-indent: -999px;
+}
+
+.japanese {
+    background-color: #83a95c;
+}
+
+.western {
+    background-color: #ffd98e;
+}
+
+.chinese {
+    background-color: #ff6464;
+}
+
+.light {
+    background-color: #fecd1a;
+}
+
+.image-map {
+    width: 100%;
+}
+
+footer {
+    height: 90px;
+    background-color: cadetblue;
+}
